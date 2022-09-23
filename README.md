@@ -11,8 +11,13 @@ Must have git installed to use this script
 
 # How to install this script from source
 just clone the repo 
+
+then do 
+
 git clone https://github.com/kjfreidhof/wallpaper.sh-.git
-Do chmod +x wallpaper.sh 
+
+then Do chmod +x wallpaper.sh 
+
 and then do 
 
 ./wallpaper.sh to excute the script 
