@@ -8,32 +8,25 @@ git clone https://github.com/kjfreidhof/dotfiles.git
 
 cd dotfiles 
 
-unzip .wallpapers.zip
-unzip .wallpapers2.zip
-unzip .wallpapers3.zip
-unzip .wallpapers4.zip
-unzip .wallpapers5.zip
-unzip .wallpapers6.zip
-unzip .wallpapers7.zip
-unzip .wallpapers8.zip
-unzip .wallpapers9.zip
-unzip .wallpapers10.zip
-unzip .wallpapers11.zip
-unzip .wallpapers12.zip
-unzip Rotate.zip
+for i in {1..12}
+do
+   if [ "$i -eq 1" ]; then
+      unzip .wallpapers.zip
+      continue
+   fi
+   unzip .wallpapers$i.zip
+done
 
-cp -r .wallpapers ~/wallpapers
-cp -r .wallpapers2 ~/wallpapers
-cp -r .wallpapers3 ~/wallpapers
-cp -r .wallpapers4 ~/wallpapers
-cp -r .wallpapers5 ~/wallpapers
-cp -r .wallpapers6 ~/wallpapers
-cp -r .wallpapers7 ~/wallpapers
-cp -r .wallpapers8 ~/wallpapers
-cp -r .wallpapers9 ~/wallpapers
-cp -r .wallpapers10 ~/wallpapers
-cp -r .wallpapers11 ~/wallpapers
-cp -r .wallpapers12 ~/wallpapers
-cp -r Rotate.zip ~/wallpapers
+for i in {1..13}
+do
+   if [ "$i -eq 1" ]; then
+      cp -r .wallpapers ~/wallpapers
+      continue;
+   elif [ $i -eq 13 ]; then
+      cp -r .Rotate.zip ~/wallpapers
+      break;
+   fi
+   cp -r .wallpapers$i ~/wallpapers
+done
 
 exit
